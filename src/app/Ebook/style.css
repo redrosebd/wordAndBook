@@ -4,7 +4,7 @@
   p{
     margin-top: 8vw;
     text-align: center;
-    font-size: 5vw;
+    font-size: 3rem;
     color: #000000;
   }
   .page {
@@ -117,7 +117,7 @@
   html,
   body {
     font-family: 'Lovers Quarrel', cursive;
-    background: #333;
+    background: rgb(90, 142, 255);
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
   html {

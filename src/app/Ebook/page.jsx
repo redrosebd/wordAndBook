@@ -34,21 +34,21 @@ const Book = () => {
   return (
     <div className="book">
         <div id="pages" className="pages">
-          <div className="page"><p>Welcome To, <br/>RedRose Ebook</p></div>
-          <div className="page">1</div>
+          <div className="page "><p>Welcome To, <br/> <br /><span className='text-red-500'>RedRose Ebook</span></p></div>
           <div className="page"><p>First Page</p></div>
-          <div className="page">Second Page</div>
-          <div className="page"></div>
-          <div className="page"></div>
-          <div className="page"></div>
-          <div className="page"></div>
-          <div className="page"></div>
-          <div className="page"></div>
-          <div className="page"></div>
-          <div className="page"></div>
-          <div className="page"></div>
-          <div className="page"></div>
-          <div className="page"></div>
+          <div className="page"><p>Second Page</p></div>
+          <div className="page"><p>Third Page</p></div>
+          <div className="page"><p>Fourth Page</p></div>
+          <div className="page"><p>Fifth Page</p></div>
+          <div className="page"><p>Sixth Page</p></div>
+          <div className="page"><p>Seventh Page</p></div>
+          <div className="page"><p>Eighth Page</p></div>
+          <div className="page"><p>Ninth Page</p></div>
+          <div className="page"><p>Tenth Page</p></div>
+          <div className="page"><p>Eleven Page</p></div>
+          <div className="page"><p>Twelve Page</p></div>
+          <div className="page"><p>Thirteenth Page</p></div>
+          <div className="page"><p>Fourteenth Page</p></div>
           <div className="page"><p>The End</p></div>
           
         </div>

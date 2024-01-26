@@ -32,12 +32,30 @@ const Book = () => {
   }, []);
 
   return (
-    <div className="book">
+    <div className="main-container">
+      <div className="book">
         <div id="pages" className="pages">
           <div className="page "><p>Welcome To, <br/> <br /><span className='text-red-500'>RedRose Ebook</span></p></div>
-          <div className="page"><p>First Page</p></div>
-          <div className="page"><p>Second Page</p></div>
-          <div className="page"><p>Third Page</p></div>
+
+          {/* -----------------Single Page------------- */}
+          <div className="page p-4 ">
+            <div className='page-border h-full  rounded-md  overflow-hidden p-3 text-justify'>
+              <div className='z-[2]'>First Page Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis id eveniet quos debitis perspiciatis corporis. Optio, tempore ut, nesciunt cum voluptas officiis laudantium porro possimus maxime, doloribus aspernatur earum fugit dolor vero. Illo eius fugiat est deleniti enim magni nesciunt! Molestiae, asperiores qui neque modi, dolorem eligendi culpa iusto consequuntur similique facere voluptatibus consectetur sit minus rem! Voluptatum libero mollitia tempore velit excepturi doloremque ipsa nihil rem, consectetur vitae, quo perspiciatis qui neque id ipsum quae animi illo totam omnis. Assumenda velit temporibus ab, provident similique sequi, corporis repudiandae exercitationem beatae rerum corrupti aut ad quidem. Nam deleniti molestias obcaecati.</div>
+              
+              <span className='page-counter'>1</span>
+
+            </div>
+          </div>
+          {/* -----------------------Single Page End ------------------ */}
+
+          <div className="page p-4">
+            <div className='page-border h-full  rounded-md'>
+              <p>Second Page</p>
+            </div>
+          </div>
+
+
+          {/* <div className="page"><p>Third Page</p></div>
           <div className="page"><p>Fourth Page</p></div>
           <div className="page"><p>Fifth Page</p></div>
           <div className="page"><p>Sixth Page</p></div>
@@ -48,11 +66,12 @@ const Book = () => {
           <div className="page"><p>Eleven Page</p></div>
           <div className="page"><p>Twelve Page</p></div>
           <div className="page"><p>Thirteenth Page</p></div>
-          <div className="page"><p>Fourteenth Page</p></div>
+          <div className="page"><p>Fourteenth Page</p></div> */}
           <div className="page"><p>The End</p></div>
           
         </div>
       </div>
+    </div>
   );
 };
 

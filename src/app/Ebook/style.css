@@ -1,13 +1,33 @@
+
+
+.main-container {
+  background: rgb(90, 142, 255);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+  line-height: 1.5em;
+}
+
+
+
 .book {
     transition: opacity 0.4s 0.2s;
+    perspective: 250vw;
   }
-  p{
-    margin-top: 8vw;
-    text-align: center;
-    font-size: 3rem;
-    color: #000000;
+
+.book .pages {
+    width: 60vw;
+    height: 44vw;
+    position: relative;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    border-radius: 4px;
   }
-  .page {
+
+.page {
     width: 30vw;
     height: 44vw;
     background-color: #111111;
@@ -16,21 +36,7 @@
     background: left top no-repeat;
     background-size: cover;
   }
-  .page:nth-child(even) {
-    clear: both;
-  }
-  .book {
-    perspective: 250vw;
-  }
-  .book .pages {
-    width: 60vw;
-    height: 44vw;
-    position: relative;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    border-radius: 4px;
-    /*box-shadow: 0 0 0 1px #e3dfd8;*/
-  }
+
   .book .page {
     float: none;
     clear: none;
@@ -47,6 +53,8 @@
     user-select: none;
     background-color: #f0f0f0;
   }
+
+
   .book .page:before {
     content: '';
     position: absolute;
@@ -58,7 +66,11 @@
     transition: background 0.7s;
     z-index: 2;
   }
-  .book .page:nth-child(odd) {
+.page:nth-child(even) {
+    clear: both;
+  }
+
+.book .page:nth-child(odd) {
     pointer-events: all;
     transform: rotateY(0deg);
     right: 0;
@@ -114,24 +126,20 @@
   *:after {
     box-sizing: border-box;
   }
-  html,
-  body {
-    font-family: 'Lovers Quarrel', cursive;
-    background: rgb(90, 142, 255);
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-  html {
-    height: 100%;
-  }
-  body {
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2em 0;
-    line-height: 1.5em;
-  }
+
   .page:nth-child(odd){
     background-position: right top;
   }
   
+
+
+
+/* ----------------Custom Border -------------- */
+  .page-border{
+    border: 4px double burlywood;
+  }
+
+
+  .page-counter {
+    @apply px-2  rounded-full text-[12px] bg-gray-300 text-[#312f2fc0] font-bold absolute bottom-6 left-1/2 z-[1]
+  }

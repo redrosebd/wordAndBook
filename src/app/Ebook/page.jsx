@@ -88,21 +88,21 @@ const Book = () => {
             <div className="page-border h-full  rounded-md  px-3 py-2 text-justify">
               <h2 className="text-center pt-3 pb-2 font-bold text-2xl custom-font"  >Learn English Speaking in 30 Days.</h2>
               <div className="z-[2] text-[15px] text-gray-700">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+               <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Excepturi provident odit nihil non assumenda! Ea quos ducimus
                 aspernatur numquam cumque magnam harum, sed asperiores eaque
-                optio expedita similique inventore error praesentium,
-                repellendus distinctio explicabo perspiciatis maxime temporibus
+                optio expedita similique inventore error praesentium,</p> <br />
+
+                <p>repellendus distinctio explicabo perspiciatis maxime temporibus
                 delectus hic voluptatum illum. Sed nostrum vero odit quam quod
                 animi iure rerum consequuntur voluptate eum doloremque ipsum
                 dolore quos impedit modi alias a earum, cupiditate ullam non
-                veritatis! Ullam eum dolorem ex ipsam, minima harum sunt,
-                quisquam voluptatibus beatae illo sed illum enim? Consectetur
-                culpa velit unde. Iste, voluptas tempore! Quia, itaque? Dolorum
-                perspiciatis quaerat iure reprehenderit corporis ipsa debitis
-                magnam in culpa necessitatibus obcaecati quos quam aut, ipsum
-                ullam ratione dolores adipisci. Doloribus accusantium veritatis
-                error architecto ipsum aperiam enim.
+                veritatis! Ullam eum dolorem ex ipsam, minima harum sunt, Nahid
+                quisquam voluptatibus beatae culpa velit unde.Iste, voluptas tempore! Quia, itaque? Dolorum
+                perspiciatis quaerat iure reprehenderit corporis ipsa debitis dipto
+                magnam in culpa necessitatibus obcaecati quos quam aut, ipsum Shourav
+                ullam ratione dolores adipisci. Doloribus accusantium veritatis also
+                error architecto ipsum aperiam enim.</p>
               </div>
               {/* ---------- Ideal Text Limit 1024 Characters and Maximum Text Limit 1090 Characters------  */}
               <span className="page-counter">2</span>

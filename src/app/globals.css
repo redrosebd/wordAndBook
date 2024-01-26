@@ -16,6 +16,24 @@
   }
 }
 
-body {
- 
+@font-face {
+  font-family: "Ashar-Alo";
+  src: url("../../public/fonts/Ashar-Alo/FL_Ashar_Alo_Unicode.ttf")
+    format("truetype");
+}
+
+.heading-AsharAlo {
+  font-family: "Ashar-Alo", sans-serif;
+}
+
+
+/* ------------ Common Bangla Fonts For Text--------------- */
+
+@font-face {
+  font-family: "Balooda2";
+  src: url("../../public/fonts/Balooda2/BalooDa2-Medium.ttf") format("truetype");
+}
+
+.text-common {
+  font-family: "Balooda2", sans-serif;
 }

@@ -39,9 +39,9 @@ const Book = () => {
 
           {/* -----------------Single Page------------- */}
           <div className="page p-4 ">
-            <div className='page-border h-full  rounded-md  overflow-hidden p-3 text-justify'>
-              <div className='z-[2]'>First Page Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis id eveniet quos debitis perspiciatis corporis. Optio, tempore ut, nesciunt cum voluptas officiis laudantium porro possimus maxime, doloribus aspernatur earum fugit dolor vero. Illo eius fugiat est deleniti enim magni nesciunt! Molestiae, asperiores qui neque modi, dolorem eligendi culpa iusto consequuntur similique facere voluptatibus consectetur sit minus rem! Voluptatum libero mollitia tempore velit excepturi doloremque ipsa nihil rem, consectetur vitae, quo perspiciatis qui neque id ipsum quae animi illo totam omnis. Assumenda velit temporibus ab, provident similique sequi, corporis repudiandae exercitationem beatae rerum corrupti aut ad quidem. Nam deleniti molestias obcaecati.</div>
-              
+            <div className='page-border h-full  rounded-md  px-3 py-2 text-justify'>
+              <div className='z-[2] text-[15px] text-gray-700'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi provident odit nihil non assumenda! Ea quos ducimus aspernatur numquam cumque magnam harum, sed asperiores eaque optio expedita similique inventore error praesentium, repellendus distinctio explicabo perspiciatis maxime temporibus delectus hic voluptatum illum. Sed nostrum vero odit quam quod animi iure rerum consequuntur voluptate eum doloremque ipsum dolore quos impedit modi alias a earum, cupiditate ullam non veritatis! Ullam eum dolorem ex ipsam, minima harum sunt, quisquam voluptatibus beatae illo sed illum enim? Consectetur culpa velit unde. Iste, voluptas tempore! Quia, itaque? Dolorum perspiciatis quaerat iure reprehenderit corporis ipsa debitis magnam in culpa necessitatibus obcaecati quos quam aut, ipsum ullam ratione dolores adipisci. Doloribus accusantium veritatis error architecto ipsum aperiam enim, explicabo quia dolorem modi excepturi voluptas expedita labore, eveniet tempora exercitationem eligendi vitae magnam molestias. Ex.</div>
+              {/* ---------- Ideal Text Limit 1024 Characters and Maximum Text Limit 1090 Characters------  */}
               <span className='page-counter'>1</span>
 
             </div>

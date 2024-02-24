@@ -1,12 +1,11 @@
-
-import WordAudio from '../app/WordAudio/page';
-import Ebook from '../app/Ebook/page';
+import WordAudio from "../app/WordAudio/page";
+import Ebook from "../app/Ebook/page";
 
 export default function Home() {
   return (
     <main className="">
-      {/*  <WordAudio/> */}
-      <Ebook/>
+      <WordAudio />
+      {/* <Ebook /> */}
     </main>
-  )
+  );
 }

@@ -1,53 +1,99 @@
-// ... (your existing imports)
+// Import useEffect, useState from React
 "use client";
+import Navbar from "@/app/Navbar/Navbar";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import HTMLFlipBook from "react-pageflip";
-
+import "./style.css";
 const Page = ({ params }) => {
   const [book, setBook] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 1; // Assuming you want one book page per pagination page for simplicity
 
   useEffect(() => {
     const fetchBook = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8001/books/${params.id}`
+          `https://wordbook-ten.vercel.app/books/${params.id}`
         );
         const data = await response.json();
-
-        // Assuming data is in the expected format
-        const pagesContent = data?.map((book) =>
-          book?.data?.pages.map((page) => page?.content)
+        const pagesContent = data.map((book) =>
+          book.data.pages.map((page) => page.content)
         );
-        setBook(pagesContent);
+        setBook(pagesContent.flat()); // Flatten the array if the structure is nested
       } catch (error) {
         console.error("Error fetching book:", error);
-        setBook([]);
       }
     };
-
     fetchBook();
   }, [params.id]);
+  const navigate = useRouter();
+  const handleBack = () => {
+    navigate.back();
+  };
+  const totalPages = Math.ceil(book.length / itemsPerPage);
+
+  // Calculate the pages to be shown based on the current page
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = book.slice(indexOfFirstItem, indexOfLastItem);
+
+  // Change page function
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className=" w-[1600px] mx-auto">
-      <div style={{ height: "100vh" }}>
-        <HTMLFlipBook width={300} height={500} className=" mx-auto p-12 ">
-          {book.map((pageContents, pageIndex) => (
-            <div key={pageIndex} className="demoPage">
-              {pageContents.map((item, itemIndex) => (
-                <div
-                  key={`${pageIndex}-${itemIndex}`}
-                  className="w-[800px] text-xl card  card-body my-6 min-h-[400px] bg-base-300 p-8 flex  border-2 border-teal-900 mx-auto"
+    <div>
+      <Navbar />
+      <div>
+        <div style={{ height: "100vh" }}>
+          <div className="pagination mx-auto max-w-[1600px]">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+              (number) => (
+                <button
+                  className="btn mt-4 ml-4 w-[150px] btn-outline btn-primary  text-xl font-bold mr-2 mx-auto"
+                  key={number}
+                  disabled={currentPage === number}
+                  onClick={() => paginate(number)}
                 >
-                  {item && <div dangerouslySetInnerHTML={{ __html: item }} />}
-                </div>
-              ))}
-              {pageIndex < book.length - 1 && (
-                <hr style={{ pageBreakAfter: "always" }} />
-              )}
+                  {number}
+                </button>
+              )
+            )}
+            <button
+              onClick={handleBack}
+              className="btn text-xl font-bold btn-error btn-outline my-4 w-[150px]"
+            >
+              Back
+            </button>
+          </div>
+          {currentItems.map((item, index) => (
+            <div key={index} className="demoPage mb-4">
+              <div
+                className="w-[800px] text-xl card card-body my-6 min-h-[400px] bg-base-300 p-8 flex border-2 border-teal-900 mx-auto"
+                dangerouslySetInnerHTML={{ __html: item }}
+              />
             </div>
           ))}
-        </HTMLFlipBook>
+          <div className="pagination mx-auto max-w-[1600px]">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+              (number) => (
+                <button
+                  className="btn mt-4 ml-4 w-[150px] btn-outline btn-primary mr-2 font-bold mb-4 mx-auto"
+                  key={number}
+                  disabled={currentPage === number}
+                  onClick={() => paginate(number)}
+                >
+                  {number}
+                </button>
+              )
+            )}
+            <button
+              onClick={handleBack}
+              className="btn font-bold text-xl btn-error btn-outline my-4 w-[150px]"
+            >
+              Back
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

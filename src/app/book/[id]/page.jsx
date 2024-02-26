@@ -39,7 +39,30 @@ const Page = ({ params }) => {
 
   // Change page function
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const browserHistoryFunctionBack = (s) => {
+    let stack1 = [];
+    let box1 = s;
 
+    let reverse1 = "";
+
+    let button = ["1"];
+    for (let i = 0; i < box1?.length; i++) {
+      stack1.push(box1[i]);
+    }
+    for (let i = 0; i < box1?.length; i++) {
+      reverse1 += stack1.pop();
+    }
+
+    for (let i = 0; i < button.length; i++) {
+      const back = reverse1 == button[i];
+
+      if (back) {
+        window.history.back();
+      }
+    }
+
+    return;
+  };
   return (
     <div>
       <Navbar />
@@ -87,7 +110,7 @@ const Page = ({ params }) => {
               )
             )}
             <button
-              onClick={handleBack}
+              onClick={() => browserHistoryFunctionBack("1")}
               className="btn font-bold text-xl btn-error btn-outline my-4 w-[150px]"
             >
               Back

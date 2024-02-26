@@ -10,10 +10,11 @@ const page = () => {
       .then((res) => res.json())
       .then((data) => setBooks(data));
   }, []);
-  console.log(books);
+
   return (
     <div>
       <Navbar />
+
       <div>
         <div className="flex justify-center items-center gap-6 rounded-lg my-4">
           {books.map((book) => {

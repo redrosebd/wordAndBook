@@ -34,6 +34,7 @@ function Page() {
   return (
     <div className="max-w-[1800px] mx-auto ">
       <Navbar />
+
       <div className=" w-full lg:w-10/12  mx-auto lg:mt-20 lg:py-20 text-center">
         <div className="my-10">
           <h1 className="text-center text-lg md:text-2xl lg:text-3xl font-semibold text-gray-700">

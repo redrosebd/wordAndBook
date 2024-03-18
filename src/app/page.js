@@ -5,7 +5,7 @@ import Ebook from '../app/Ebook/page';
 export default function Home() {
   return (
     <main className="">
-      {/*  <WordAudio/> */}
+       {/* <WordAudio/> */}
       <Ebook/>
     </main>
   )

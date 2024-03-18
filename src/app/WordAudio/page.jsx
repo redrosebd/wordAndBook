@@ -12,10 +12,13 @@ function Page() {
   const [commonWords, setCommonWords] = useState([]);
   useEffect(() => {
     fetch("words.json")
+    fetch("words.json")
       .then((res) => res.json())
       .then((data) => setCommonWords(data));
   }, []);
-  console.log(commonWords.map((word) => word.data.newRowData));
+
+  console.log(commonWords);
+
   /* -------For Input Field Value------------- */
   const [inputValue, setInputValue] = useState("");
   const { speak } = useSpeechSynthesis();
@@ -91,8 +94,10 @@ function Page() {
             setInputValue(e.target.value);
           }}
         ></textarea>
-      
+       
+        <br />
 
+        <div className="flex justify-center items-center mt-1 md:mt-3 lg:mt-5">
         <div className="flex justify-center items-center mt-1 md:mt-3 lg:mt-5">
           <button
             onClick={() => {
@@ -105,9 +110,54 @@ function Page() {
             Listen{" "}
           </button>
         </div>
+        </div>
       </div>
 
       {/* -------  Word Table -----------*/}
+
+      <div className="my-10">
+        <h1 className="text-center text-lg md:text-2xl lg:text-3xl font-semibold text-gray-700">
+          10 Most Common English Words
+        </h1>
+
+        <div className="overflow-x-auto w-11/12  lg:w-9/12 xl:w-7/12 mx-auto mt-3 md:mt-5 lg:mt-10 mb-20 rounded-md shadow-lg">
+          <table className="table text-[13px] md:text-[16px]">
+            {/*---------- head ------------ */}
+            <thead className="text-lg text-white font-semibold">
+              <tr className="w-full text-[15px] md:text-[16px]">
+                <th className="bg-blue-400 w-3/12">Rank</th>
+                <th className="bg-purple-400 w-4/12" title="Word With Audio">
+                  {" "}
+                  <span>English</span>{" "}
+                  <HiOutlineSpeakerWave className="inline text-xl md:text-2xl font-bold -mt-1" />
+                </th>
+                <th className="bg-orange-400 w-5/12">Bangla Meaning</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {commonWords &&
+                commonWords.map((item) => {
+                  return (
+                    <tr key={item?.rank}>
+                      <th className="bg-blue-100 ">{item?.rank}</th>
+                      <td
+                        title="Click to listen Pronunciation"
+                        onClick={handleWorldClick}
+                        className="bg-blue-100 hover:bg-blue-200 hover:cursor-pointer font-semibold text-gray-700"
+                      >
+                        {item?.word}
+                      </td>
+                      <td className="bg-blue-100 text-gray-700 font-semibold">
+                        {item?.bangla_meaning}
+                      </td>
+                    </tr>
+                  );
+                })}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 }

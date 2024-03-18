@@ -1,6 +1,5 @@
-
-import WordAudio from '../app/WordAudio/page';
-import Ebook from '../app/Ebook/page';
+import WordAudio from "../app/WordAudio/page";
+import Ebook from "../app/Ebook/page";
 
 export default function Home() {
   return (
@@ -8,5 +7,5 @@ export default function Home() {
        {/* <WordAudio/> */}
       <Ebook/>
     </main>
-  )
+  );
 }

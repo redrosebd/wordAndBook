@@ -4,8 +4,8 @@ import Ebook from "../app/Ebook/page";
 export default function Home() {
   return (
     <main className="">
-      <WordAudio />
-      {/* <Ebook /> */}
+      {/* <WordAudio /> */}
+      <Ebook />
     </main>
   );
 }

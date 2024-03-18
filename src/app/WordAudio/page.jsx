@@ -6,13 +6,12 @@ import { MdAudiotrack } from "react-icons/md";
 import { FaHeadset } from "react-icons/fa6";
 import { HiOutlineSpeakerWave } from "react-icons/hi2";
 import Link from "next/link";
-import Navbar from "../Navbar/Navbar";
 
 function Page() {
   /* ---------- Load All English Words ------------ */
   const [commonWords, setCommonWords] = useState([]);
   useEffect(() => {
-    fetch("https://wordbook-ten.vercel.app/words")
+    fetch("words.json")
       .then((res) => res.json())
       .then((data) => setCommonWords(data));
   }, []);
@@ -58,19 +57,19 @@ function Page() {
 
               <tbody>
                 {commonWords &&
-                  commonWords.map((word) => {
+                  commonWords.map((item) => {
                     return (
-                      <tr key={word?._id}>
+                      <tr key={item?.rank}>
                         {/* <th className="bg-blue-100 ">{word?.rank}</th> */}
                         <td
                           title="Click to listen Pronunciation"
                           onClick={handleWorldClick}
                           className="bg-blue-100 hover:bg-blue-200 hover:cursor-pointer font-semibold text-gray-700"
                         >
-                          {word?.data?.newRowData?.name}
+                          {item?.word}
                         </td>
                         <td className="bg-blue-100 text-gray-700 font-semibold">
-                          {word?.data?.newRowData?.meaning}
+                          {item?.bangla_meaning}
                         </td>
                       </tr>
                     );
@@ -79,23 +78,22 @@ function Page() {
             </table>
           </div>
         </div>
-        {/* <h1 className=" text-xl md:text-2xl lg:text-4xl font-bold flex justify-center items-center text-gray-700">
+        <h1 className=" text-xl md:text-2xl lg:text-4xl font-bold flex justify-center items-center text-gray-700">
           <FaHeadset className="inline text-2xl md:text-3xl lg:text-6xl text-red-500 me-1 lg:me-2" />
           <span>RedRose Audio Book</span>{" "}
           <MdAudiotrack className="inline text-2xl md:text-4xl lg:text-6xl text-red-500" /> 
-        </h1>*/}
+        </h1>
 
-        {/* <textarea
+        <textarea
           placeholder="Write your text here."
           className=" w-11/12 md:w-8/12 lg:w-8/12 xl:w-6/12 mt-3 md:mt-8 border-2 lg:border-4 border-red-400 rounded-lg h-32 md:h-40  mx-auto p-2"
           onChange={(e) => {
             setInputValue(e.target.value);
           }}
-        ></textarea> */}
-        {/* <ul className="flex gap-4 justify-center btn my-4 text-xl"></ul>
-        <br /> */}
+        ></textarea>
+      
 
-        {/* <div className="flex justify-center items-center mt-1 md:mt-3 lg:mt-5">
+        <div className="flex justify-center items-center mt-1 md:mt-3 lg:mt-5">
           <button
             onClick={() => {
               handleInputFieldClick();
@@ -106,7 +104,7 @@ function Page() {
             <HiOutlineSpeakerWave className="inline text-xl md:text-2xl font-bold" />{" "}
             Listen{" "}
           </button>
-        </div> */}
+        </div>
       </div>
 
       {/* -------  Word Table -----------*/}

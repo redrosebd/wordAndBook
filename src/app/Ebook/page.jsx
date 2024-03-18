@@ -4,15 +4,7 @@ import "./style.css";
 import Image from "next/image";
 import imageSuccess from "../../../public/image/success.png";
 const Book = () => {
-  const [book, setBook] = useState([]);
-  useEffect(() => {
-    fetch("https://wordbook-ten.vercel.app/books")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setBook(data);
-      });
-  }, []);
+
   useEffect(() => {
     const pages = document.getElementsByClassName("page");
 
@@ -49,17 +41,11 @@ const Book = () => {
 
           <div className="page p-4  ">
             <div className="page-border h-full  rounded-md flex justify-center items-center">
-              {/* <p className="custom-font font-bold text-4xl ">
+              <p className="custom-font font-bold text-4xl ">
                   Welcome To, <br />{" "}
                   <span className="text-red-500">RedRose Ebook</span>
-                </p> */}
-              {book.map((data) => {
-                return (
-                  <p className="custom-font font-bold text-4xl ">
-                    {data?.data?.title}
-                  </p>
-                );
-              })}
+                </p>
+             
             </div>
           </div>
 

@@ -6,7 +6,7 @@ export default function Navbar() {
   const [menuClicked, setMenuClicked] = useState(false);
 
   return (
-    <div className="bg-blue-400 p-2  z-10">
+    <div className="bg-[#075F8F] p-2  z-10 lg:my-1 lg:rounded">
       {/* ----------------Nav Items For Big Screen ---------- */}
       <div className="hidden lg:flex justify-between items-center">
         <div>
@@ -44,7 +44,7 @@ export default function Navbar() {
       <div
         className={`${
           menuClicked ? "block" : "hidden"
-        } lg:hidden min-w-32 min-h-40 bg-pink-400 absolute right-[10px] top-12 rounded-lg shadow-2xl z-20`}
+        } lg:hidden min-w-32 min-h-40 bg-[#075f8fde] absolute right-[10px] top-12 rounded-lg shadow-2xl z-20`}
       >
         <ul className=" text-white p-4">
           <li>Book One</li>

@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${ubuntu.className} max-w-[1366px] w-11/12 mx-auto`} >
+      <body className={`${ubuntu.className} max-w-[1366px] lg:w-11/12 mx-auto`} >
  
         <Navbar/>
         {children}

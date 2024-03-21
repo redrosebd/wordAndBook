@@ -1,5 +1,6 @@
 import { Inter, Ubuntu } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar/Navbar";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -14,7 +15,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={ubuntu.className}>{children}</body>
+      <body className={`${ubuntu.className} max-w-[1366px] w-11/12 mx-auto`} >
+ 
+        <Navbar/>
+        {children}
+         <footer>
+           This is footer
+         </footer>
+
+        </body>
+ 
     </html>
   );
 }

@@ -37,3 +37,10 @@
 .text-common {
   font-family: "Balooda2", sans-serif;
 }
+
+.chapters > li {
+  padding: 3px 0;
+  border-bottom: 1px dotted gray;
+  border-left: 4px solid #036ba3;
+  padding-left: 4px ;
+}

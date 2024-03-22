@@ -7,19 +7,25 @@ export default function Home() {
       <Navbar />
 
       {/* ------------ ------------ Main Content ------------------------*/}
-      <div className="flex w-12/12 justify-between gap-4 mt-3">
+      <div className="flex flex-col lg:flex-row w-12/12 justify-between gap-4 mt-3">
         {/* -------------Content Menu------------- */}
-        <div className="w-3/12">
-          <h2 className="bg-[#075F8F] font-bold text-[22px] text-white px-2 py-1">Chapters</h2>
-         <ul>
-           <li></li>
-         </ul>
+        <div className="w-12/12 lg:w-3/12">
+          <h2 className="bg-[#075F8F] font-bold text-[22px] text-white px-2 py-1">
+            Chapters
+          </h2>
+          <ul className=" bg-[#dbeafeb0]  pb-10 chapters ">
+            <li>Chapter One</li>
+            <li>Chapter Two</li>
+            <li>Chapter Three</li>
+            <li>Chapter Four</li>
+            <li>Chapter Five</li>
+            <li>Chapter Six</li>
+          </ul>
         </div>
         {/* -----------Content ---------------- */}
-        <div className="w-9/12">
+        <div className="w-12/12 lg:w-9/12">
           <Ebook />
         </div>
-
       </div>
     </main>
   );

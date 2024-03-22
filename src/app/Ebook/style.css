@@ -1,7 +1,7 @@
 
 
 .mainArea {
-  @apply bg-blue-100  select-none min-h-screen flex justify-center items-center py-8
+  @apply bg-[#dbeafeb0] select-none min-h-screen flex justify-center items-center py-8
 
 }
 

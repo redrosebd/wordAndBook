@@ -50,6 +50,20 @@ const Book = () => {
             </div>
           </div>
 
+          {/* -----------------Publisher and Author Details------------- */}
+          <div className="page p-4 ">
+            <div className="page-border h-full  rounded-md  px-3 py-2  text-justify flex justify-center items-center">
+              
+              {/* ---------Main Text content--------- */}
+              <div className="z-[2] text-[15px] text-gray-700 flex justify-center items-center">
+                <div>
+                <h2 className="text-lg font-bold text-[#075F8F]">Published By: <a className="text-xl text-black" href="https://www.redrosebd.com/" target="_blank">RedRose Academy</a></h2>
+                <h2 className="text-[#287099] font-bold">Author: <span className="text-black">MD. Norozzaman</span></h2>
+                </div>
+              </div>
+      
+            </div>
+          </div>
           {/* -----------------First Single Page------------- */}
           <div className="page p-4 ">
             <div className="page-border h-full  rounded-md  px-3 py-2 text-justify">
@@ -100,8 +114,7 @@ const Book = () => {
                 quisquam voluptatibus beatae culpa velit unde.Iste, voluptas tempore! Quia, itaque? Dolorum
                 perspiciatis quaerat iure reprehenderit corporis ipsa debitis dipto
                 magnam in culpa necessitatibus obcaecati quos quam aut, ipsum Shourav
-                ullam ratione dolores adipisci. Doloribus accusantium veritatis also
-                error architecto ipsum aperiam enim.</p>
+                ullam ratione dolores adipisci.</p>
               </div>
               {/* ---------- Ideal Text Limit 1024 Characters and Maximum Text Limit 1090 Characters------  */}
               <span className="page-counter">2</span>

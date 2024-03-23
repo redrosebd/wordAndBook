@@ -10,14 +10,10 @@ export default function Navbar() {
       {/* ----------------Nav Items For Big Screen ---------- */}
       <div className="hidden lg:flex justify-between items-center">
         <div>
-          <ul className="flex gap-6   text-white ">
-            <li>Book One |</li>
-            <li>Book Two |</li>
-            <li>Book Three |</li>
-            <li>Book Four |</li>
-            <li>Book Five |</li>
-            <li>Book Six |</li>
-            <li>Book Seven </li>
+          <ul className="flex items-end gap-2   text-white ">
+            <li>Book Name: </li>
+            <li className="text-xl font-bold">Fast Learning English</li>
+            
           </ul>
         </div>
 

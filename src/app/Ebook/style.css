@@ -1,7 +1,7 @@
 
 
 .mainArea {
-  @apply bg-[#dbeafeb0] select-none min-h-screen flex justify-center items-center py-8
+  @apply bg-[#dbeafeb0] select-none  flex justify-center  py-5
 
 }
 
@@ -14,14 +14,14 @@
   }
 
  .pages {
-     @apply w-[60vw] h-[44vw] relative rounded-md;
+     @apply w-[880px] h-[550px] relative rounded-md;
      transform-style: preserve-3d;
      backface-visibility: hidden;
   }
 
 
 .page {
-    @apply w-[30vw] h-[44vw];
+    @apply w-[440px] h-[550px];
     float: none;
     clear: none;
     margin-bottom: 0.5em;
@@ -133,3 +133,5 @@
   .custom-font{
     font-family: cursive;
   }
+
+  

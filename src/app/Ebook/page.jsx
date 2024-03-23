@@ -153,7 +153,40 @@ const Book = () => {
           </div>
           {/* -----------------Third Single Page End------------- */}
 
+
           {/* -----------------Fourth Single Page------------- */}
+
+          <div className="page p-4 ">
+            <div className="page-border h-full  rounded-md  px-3 py-2 text-justify">
+              <div className="z-[2] text-[15px] text-gray-700">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Excepturi provident odit nihil non assumenda! Ea quos ducimus
+                aspernatur numquam cumque magnam harum, sed asperiores eaque
+                optio expedita similique inventore error praesentium,
+                repellendus distinctio explicabo perspiciatis maxime temporibus
+                delectus hic voluptatum illum. Sed nostrum vero odit quam quod
+                animi iure rerum consequuntur voluptate eum doloremque ipsum
+                dolore quos impedit modi alias a earum, cupiditate ullam non
+                veritatis! Ullam eum dolorem ex ipsam, minima harum sunt,
+                quisquam voluptatibus beatae illo sed illum enim? Consectetur
+                culpa velit unde. Iste, voluptas tempore! Quia, itaque? Dolorum
+                perspiciatis quaerat iure reprehenderit corporis ipsa debitis
+                magnam in culpa necessitatibus obcaecati quos quam aut, ipsum
+                ullam ratione dolores adipisci. Doloribus accusantium veritatis
+                error architecto ipsum aperiam enim, explicabo quia dolorem modi
+                excepturi voluptas expedita labore, eveniet tempora
+                exercitationem eligendi vitae magnam molestias. Ex. Lorem ipsum
+                dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor
+                sit amet.
+              </div>
+              {/* ---------- Ideal Text Limit 1024 Characters and Maximum Text Limit 1090 Characters------  */}
+              <span className="page-counter">4</span>
+            </div>
+          </div>
+          {/* -----------------Fourth Single Page End------------- */}
+
+
+          {/* -----------------Fifth Single Page------------- */}
 
           <div className="page p-4 ">
             <div className="page-border h-full  rounded-md  px-3 py-2 text-justify">
@@ -183,10 +216,10 @@ const Book = () => {
                 </p>
               </div>
               {/* ---------- Ideal Text Limit 1024 Characters and Maximum Text Limit 1090 Characters------  */}
-              <span className="page-counter">4</span>
+              <span className="page-counter">5</span>
             </div>
           </div>
-          {/* -----------------Fourth Single Page End------------- */}
+          {/* -----------------Fifth Single Page End------------- */}
 
           {/* <div className="page"><p>Third Page</p></div>
           <div className="page"><p>Fourth Page</p></div>

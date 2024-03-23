@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
+import { FaShare, FaFacebookSquare, FaInstagramSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 export default function Navbar() {
   const [menuClicked, setMenuClicked] = useState(false);
 
@@ -17,8 +18,19 @@ export default function Navbar() {
           </ul>
         </div>
 
-        <div>
-          <h2 className="font-bold text-white text-xl">RedRose Ebook</h2>
+        <div className="flex items-center gap-10">
+           
+           <div className="text-white text-xl flex gap-3">
+              <span title="Share with"><FaShare/></span>
+             <a href="#"><FaFacebookSquare/> </a>
+             <a href="#"><FaInstagramSquare/> </a>
+             <a href="#"><FaLinkedin/> </a>
+             <a href="#"><FaTwitterSquare/> </a>
+           </div>
+
+           <div>
+             <h2 className="font-bold text-white text-xl">RedRose Ebook</h2>
+           </div>
         </div>
       </div>
 

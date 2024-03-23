@@ -15,11 +15,7 @@ export default function Home() {
           </h2>
           <ul className=" bg-[#dbeafeb0]  pb-10 chapters ">
             <li>Chapter One</li>
-            <li>Chapter Two</li>
-            <li>Chapter Three</li>
-            <li>Chapter Four</li>
-            <li>Chapter Five</li>
-            <li>Chapter Six</li>
+            
           </ul>
         </div>
         {/* -----------Content ---------------- */}

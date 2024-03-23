@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import Image from "next/image";
 import imageSuccess from "../../../public/image/success.png";
+import bookFrontPage from '../../../public/image/bookCoverFs.jpg';
+import bookBackPage from '../../../public/image/bookCoverBs.jpg';
 const Book = () => {
 
   useEffect(() => {
@@ -39,12 +41,11 @@ const Book = () => {
         <div id="pages" className="pages">
           {/* -------------------Cover Page --------------- */}
 
-          <div className="page p-4  ">
-            <div className="page-border h-full  rounded-md flex justify-center items-center">
-              <p className="custom-font font-bold text-4xl ">
-                  Welcome To, <br />{" "}
-                  <span className="text-red-500">RedRose Ebook</span>
-                </p>
+          <div className="page ">
+            <div className="h-full  rounded-md">
+              <div className="w-full  rounded-md">
+                <Image src={bookFrontPage} className="w-full mx-auto  rounded-md"></Image>
+              </div>
              
             </div>
           </div>
@@ -71,8 +72,7 @@ const Book = () => {
                 repellendus distinctio explicabo perspiciatis maxime temporibus
                 delectus hic voluptatum illum. Sed nostrum vero odit quam quod
                 animi iure rerum consequuntur voluptate eum doloremque ipsum
-                dolore quos impedit modi alias a earum, cupiditate ullam non
-                veritatis! Ullam eum dolorem ex ipsam
+                dolore quos impedit modi alias a earum
               </div>
               {/* ---------- Ideal Text Limit 1024 Characters and Maximum Text Limit 1090 Characters------  */}
               <span className="page-counter">1</span>
@@ -189,11 +189,12 @@ const Book = () => {
           <div className="page"><p>Fourteenth Page</p></div> */}
 
           {/* -------------------End Page --------------- */}
-          <div className="page p-4  ">
-            <div className="page-border h-full  rounded-md flex justify-center items-center">
-              <p className="custom-font font-bold text-4xl ">
-                The End <span className="text-red-500">...</span>
-              </p>
+          <div className="page ">
+            <div className="h-full  rounded-md">
+              <div className="w-full  rounded-md">
+                <Image src={bookBackPage} className="w-full mx-auto  rounded-md"></Image>
+              </div>
+             
             </div>
           </div>
         </div>

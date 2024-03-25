@@ -1,5 +1,6 @@
 import { Inter, Ubuntu } from "next/font/google";
 import "./globals.css";
+import Footer from "./components/Footer/Footer";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -17,6 +18,9 @@ export default function RootLayout({ children }) {
       <body className={`${ubuntu.className} max-w-[1366px] lg:w-11/12 mx-auto`} >
         {children}
 
+
+         
+         <Footer/>
         </body>
  
     </html>

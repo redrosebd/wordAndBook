@@ -2,6 +2,7 @@ import Link from "next/link";
 import getBook from "../../lib/getBook";
 import Ebook from "../app/Ebook/page";
 import Navbar from "./components/Navbar/Navbar";
+import BookCover from "./components/BookCover/BookCover";
 
 
 
@@ -32,8 +33,8 @@ export default async function Home() {
           </ul>
         </div>
         {/* -----------Content ---------------- */}
-        <div className="w-12/12 lg:w-9/12">
-          <Ebook />
+        <div className="w-12/12 lg:w-9/12 bg-[#dbeafeb0] ">
+          <BookCover></BookCover>
         </div>
       </div>
     </main>

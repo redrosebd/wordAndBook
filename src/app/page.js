@@ -34,7 +34,9 @@ export default async function Home() {
         </div>
         {/* -----------Content ---------------- */}
         <div className="w-12/12 lg:w-9/12 bg-[#dbeafeb0] ">
-          <BookCover></BookCover>
+          <Link href={`book/1`}>
+           <BookCover></BookCover>
+          </Link>
         </div>
       </div>
     </main>

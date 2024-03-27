@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar/Navbar";
 import BookCover from "./components/BookCover/BookCover";
 
 
-
 export default async function Home() {
 
   const bookData = await getBook() ;

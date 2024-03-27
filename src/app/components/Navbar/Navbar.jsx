@@ -13,7 +13,7 @@ export default function Navbar() {
         <div>
           <ul className="flex items-end gap-2   text-white ">
             <li>Book Name: </li>
-            <li className="text-xl font-bold">Fast Learning English</li>
+            <li className="text-xl font-bold"> <span className="text-[#FBE050]">দূর্বলদের</span> Fast Learning English <span className="text-[#FBE050]">Part - I</span></li>
             
           </ul>
         </div>

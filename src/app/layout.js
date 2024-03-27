@@ -1,5 +1,7 @@
 import { Inter, Ubuntu } from "next/font/google";
 import "./globals.css";
+import Footer from "./components/Footer/Footer";
+import bookImag from '../../public/image/bookCoverFs.jpg';
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -7,8 +9,11 @@ const ubuntu = Ubuntu({
 });
 
 export const metadata = {
-  title: "Most Common English Words",
-  description: "Created by Red-Rose Corporation",
+  title: "দূর্বলদের Fast Learning English Part - I",
+  description: "Easy English learning master book for all of us",
+  openGraph: {
+    images: `${bookImag.src}`,
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -17,6 +22,9 @@ export default function RootLayout({ children }) {
       <body className={`${ubuntu.className} max-w-[1366px] lg:w-11/12 mx-auto`} >
         {children}
 
+
+         
+         <Footer/>
         </body>
  
     </html>

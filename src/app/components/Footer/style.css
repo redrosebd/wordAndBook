@@ -1,0 +1,26 @@
+.footer-bg {
+  /* background-image: url("../../../../public//asset/footer.png"); */
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.822);
+  background-position: right center, top center, bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 400px;
+}
+
+.gradient {
+  background: #833ab4;
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+}
+
+/* ------------ Nav Items Style------- */
+
+.navItem > p {
+  color: #e2e2e2;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.icon-style {
+  @apply p-2 rounded-full border border-white hover:text-black hover:bg-white duration-200;
+}
